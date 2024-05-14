@@ -87,6 +87,8 @@ onMount(function () {
 
 	// If the particles off query parameter is set to 1, don't run animate()
 	if (params.get('particles') !== 'off') {
-		animate();
+		setTimeout(() => {
+			animate();
+		}, 5000);
 	}
 });

@@ -1,6 +1,6 @@
 :root {
 	/* Animation Duration Variables */
-	--bg-fade-duration: 5s;
+	--bg-fade-duration: 10s;
 	--fade-in-duration: 3s;
 	--scale-up-duration: 10s;
 	--rotate-and-scale-duration: 50s;
@@ -92,6 +92,7 @@ body {
 
 .mask-container img.universe {
 	animation: rotateAndScale var(--rotate-and-scale-duration) infinite linear;
+	width: 200%;
 	filter: grayscale(100%) contrast(200%);
 }
 
@@ -257,6 +258,10 @@ canvas {
 
 @keyframes bendingLightWGlowFadeIn {
 	0% {
+		opacity: 0;
+	}
+
+	30% {
 		opacity: 0;
 	}
 

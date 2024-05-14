@@ -1,12 +1,12 @@
 const mobileConfig = {
-	sizeRange: [0.8, 2.3],
+	sizeRange: [0.8, 1.7],
 	speedRange: [0.1, 0.4],
 	opacityRange: [0.1, 0.4],
 	particleCount: 100
 };
 
 const desktopConfig = {
-	sizeRange: [1, 3],
+	sizeRange: [1, 2],
 	speedRange: [0.2, 0.6],
 	opacityRange: [0.1, 0.4],
 	particleCount: 200
@@ -89,6 +89,6 @@ onMount(function () {
 	if (params.get('particles') !== 'off') {
 		setTimeout(() => {
 			animate();
-		}, 5000);
+		}, 7000);
 	}
 });

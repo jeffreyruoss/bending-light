@@ -24,7 +24,6 @@ body {
 }
 
 body {
-	overflow: hidden;
 	background-color: black;
 	background-size: cover;
 	background-position: center;
@@ -33,6 +32,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 100px;
+	overflow: hidden;
 }
 
 .bg {
@@ -88,6 +88,7 @@ body {
 	transform: translate(-50%, -50%);
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .mask-container img.universe {
@@ -164,7 +165,6 @@ body {
 	fill: #be896a;
 }
 
-/* Canvas Styles */
 canvas {
 	position: absolute;
 	top: 0;

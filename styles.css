@@ -1,11 +1,12 @@
 :root {
 	/* Animation Duration Variables */
-	--bg-fade-duration: 10s;
-	--fade-in-duration: 3s;
+	--bg-fade-duration: 5s;
+	--fade-in-duration: 1s;
 	--scale-up-duration: 10s;
-	--rotate-and-scale-duration: 50s;
+	--rotate-duration: 100s;
+	--scale-duration: 13s;
 	--pulse-duration: 3s;
-	--bending-light-w-glow-fade-in-duration: 15s;
+	--bending-light-w-glow-fade-in-duration: 9s;
 	--slide-up-duration: 8s;
 }
 
@@ -92,14 +93,14 @@ body {
 }
 
 .mask-container img.universe {
-	animation: rotateAndScale var(--rotate-and-scale-duration) infinite linear;
+	animation: rotate var(--rotate-duration) infinite linear;
 	width: 200%;
 	filter: grayscale(100%) contrast(200%);
 }
 
 @media (min-width: 1024px) {
 	.mask-container img.universe {
-		animation: rotateAndScale calc(var(--rotate-and-scale-duration) * 2) infinite linear;
+		animation: rotate calc(var(--rotate-duration) * 2) infinite linear;
 	}
 }
 
@@ -157,12 +158,12 @@ body {
 .social-media svg {
 	width: 40px;
 	height: 40px;
-	fill: #EBBDA2;
+	fill: #94A8FB;
 	transition: fill 0.2s;
 }
 
-.social-media a:hover svg {
-	fill: #be896a;
+social-media a:hover svg {
+	fill: #ced8ff;
 }
 
 canvas {
@@ -201,17 +202,27 @@ canvas {
 	}
 }
 
-@keyframes rotateAndScale {
+@keyframes rotate {
 	0% {
-		transform: rotate(0deg) scale(1);
-	}
-
-	50% {
-		transform: rotate(180deg) scale(1.6);
+		transform: rotate(0deg);
 	}
 
 	100% {
-		transform: rotate(360deg) scale(1);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.6);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 

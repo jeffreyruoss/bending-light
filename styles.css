@@ -35,18 +35,25 @@ body {
 	gap: 100px;
 }
 
-body::before {
-	content: '';
+.bg {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url('bg.webp');
+	width: 100vw;
+	height: 100vh;
+	background-image: url('bg-small.webp');
 	background-size: cover;
 	z-index: -1;
 	opacity: 0.01;
 	animation: bgFade var(--bg-fade-duration) ease-in-out forwards;
+}
+
+@media (min-width: 1024px) {
+	.bg {
+		background-image: url('bg-large.webp');
+		width: 100%;
+		height: 100%;
+	}
 }
 
 /* Logo Styles */

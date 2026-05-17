@@ -18,6 +18,10 @@
 }
 
 /* Body and HTML Styles */
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	width: 100%;
@@ -28,20 +32,29 @@ body {
 	background-color: black;
 	background-size: cover;
 	background-position: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 100px;
 	overflow-x: hidden;
-	padding: 40px 0;
 }
 
-@media (max-width: 1023px) {
-	body {
-		justify-content: flex-start;
-		gap: 40px;
-	}
+/* Section Layout */
+.hero,
+.listen {
+	min-height: 100vh;
+	min-height: 100svh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 40px 20px;
+}
+
+.hero {
+	padding-bottom: 100px;
+}
+
+.listen {
+	gap: 60px;
 }
 
 .bg {
@@ -140,6 +153,55 @@ body {
 		font-size: 19px;
 		line-height: 1.5;
 	}
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	color: #94A8FB;
+	text-decoration: none;
+	transform: translateX(-50%);
+	animation: fadeIn 2s ease-in-out var(--bg-fade-duration) both;
+	cursor: pointer;
+	font-family: 'Arial', sans-serif;
+}
+
+.scroll-down-text {
+	font-size: 16px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #ced8ff;
+	text-shadow: 0 0 6px #040323, 0 0 12px #040323, 0 0 20px #040323;
+}
+
+@media (min-width: 1024px) {
+	.scroll-down-text {
+		font-size: 18px;
+	}
+}
+
+.scroll-down svg {
+	width: 32px;
+	height: 32px;
+	fill: currentColor;
+	animation: bounceDown 2s ease-in-out infinite;
+	transition: fill 0.2s;
+}
+
+.scroll-down:hover svg {
+	fill: #ced8ff;
+}
+
+@keyframes bounceDown {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(8px); }
 }
 
 /* Bandcamp Embed Styles */

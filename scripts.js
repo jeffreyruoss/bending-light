@@ -1,3 +1,10 @@
+if ('scrollRestoration' in history) {
+	history.scrollRestoration = 'manual';
+}
+window.addEventListener('pageshow', (e) => {
+	if (e.persisted) window.scrollTo({ top: 0, behavior: 'instant' });
+});
+
 const mobileConfig = {
 	sizeRange: [0.8, 1.7],
 	speedRange: [0.1, 0.4],

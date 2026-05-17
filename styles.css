@@ -134,6 +134,19 @@ body {
 	}
 }
 
+/* Bandcamp Embed Styles */
+.bandcamp-embed {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	animation: slideUp var(--slide-up-duration) ease-in-out;
+	z-index: 1;
+}
+
+.bandcamp-embed iframe {
+	max-width: 90vw;
+}
+
 /* Social Media Container Styles */
 .social-media-container {
 	width: 100%;
